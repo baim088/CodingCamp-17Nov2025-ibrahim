@@ -1,0 +1,13 @@
+.logo-icon {
+  width: 75px;
+  height: 75px;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
