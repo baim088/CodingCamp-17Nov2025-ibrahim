@@ -3,32 +3,201 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ib Company</title>
+    <title>Ibrahim Company</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css\style.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <!-- Header Content-->
-    <header class="main-header">
+    <header class="main-header p-[8px]">
       <!-- Logo Icon -->
       <div class="logo-icon"></div>
 
       <!-- Navigation -->
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Our Profle</a>
-        <a href="#">Portofolio</a>
-        <a href="#">Message Us</a>
+        <a class="border p-[4px] rounded hover:bg-gray-200" href="#home-page"
+          >Home</a
+        >
+        <a
+          class="border p-[4px] rounded hover:bg-gray-200"
+          href="#our-profile-page"
+          >Our Profile</a
+        >
+        <a
+          class="border p-[4px] rounded hover:bg-gray-200"
+          href="#our-portofolio-page"
+          >Portofolio</a
+        >
+        <a
+          class="border p-[4px] rounded hover:bg-gray-200"
+          href="#message-us-page"
+          >Message Us</a
+        >
       </nav>
     </header>
 
+    <hr />
+
     <!-- Main Content -->
-    <main></main>
+    <main>
+      <!-- Home Page -->
+      <section id="home-page" class="min-h-[100vh] text-center content-center">
+        <h1 class="text-xl font-bold text-center" id="welcome-speech">
+          Welcome to Our Website
+        </h1>
+        <p class="text-center mt-2">
+          Your trusted partner in business solutions.
+        </p>
+      </section>
+    </main>
+
+    <hr />
+
+    <!-- Our Profile Page -->
+    <section
+      id="our-profile-page"
+      class="min-h-[100vh] text-center content-center bg-gray-50"
+    >
+      <h1 class="text-xl font-bold text-center">Our Profile</h1>
+      <p class="text-center mt-2">
+        Ibrahim Company is dedicated to providing top-notch services to our
+        clients.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- Portofolio Page -->
+    <section
+      id="our-portofolio-page"
+      class="min-h-[100vh] text-center content-center bg-gray-50"
+    >
+      <h1 class="text-xl font-bold text-center">Portofolio</h1>
+      <p class="text-center mt-2">
+        Explore our diverse range of successful projects and satisfied clients.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- Message Us Page -->
+    <section id="message-us-page" class="min-h-[600px] mx-8 py-8">
+      <header class="mb-6">
+        <h1 class="text-3xl font-bold">Message Us</h1>
+      </header>
+
+      <div class="flex flex-col md:flex-row gap-10">
+        <form id="contact-form" class="w-full md:w-1/2 flex flex-col gap-4">
+          <div class="flex items-center">
+            <label for="name" class="w-32 font-semibold">Nama :</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Nama"
+              class="border border-black p-2 rounded w-full"
+              required
+            />
+          </div>
+
+          <div class="flex items-center">
+            <label for="email" class="w-32 font-semibold">Email :</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              class="border border-black p-2 rounded w-full"
+              required
+            />
+          </div>
+
+          <div class="flex items-center">
+            <label for="dob" class="w-32 font-semibold">Tgl Lahir :</label>
+            <input
+              id="dob"
+              type="date"
+              class="border border-black p-2 rounded w-full"
+              required
+            />
+          </div>
+
+          <div class="flex items-start md:items-center">
+            <label class="w-32 font-semibold">Jenis Kelamin :</label>
+            <div class="flex gap-4 w-full">
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Laki-Laki"
+                  class="scale-125"
+                  required
+                />
+                Laki-Laki
+              </label>
+              <label class="flex items-center gap-1 cursor-pointer">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Perempuan"
+                  class="scale-125"
+                />
+                Perempuan
+              </label>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <label for="message" class="w-32 font-semibold mt-2">Pesan :</label>
+            <textarea
+              id="message"
+              placeholder="Pesan"
+              class="border border-black p-2 rounded w-full h-32"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-gray-200 text-black border border-black p-2 rounded mt-4 hover:bg-gray-300 w-full"
+          >
+            Submit
+          </button>
+        </form>
+
+        <div
+          class="w-full md:w-1/2 border border-black p-6 h-fit min-h-[300px] bg-white shadow-sm"
+        >
+          <div id="result-container">
+            <p class="mb-4">
+              <strong>Current time :</strong> <span id="current-time"></span>
+            </p>
+
+            <p class="mb-1">
+              <strong>Nama :</strong> <span id="sender-name"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Email :</strong> <span id="sender-email"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Tanggal Lahir :</strong> <span id="sender-dob"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Jenis Kelamin :</strong> <span id="sender-gender"></span>
+            </p>
+            <p class="mb-1">
+              <strong>Pesan :</strong> <span id="sender-message"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer Content -->
-    <footer style="text-align: center">
-      <span>@2025 Ib Company</span>
+    <footer class="p-4 text-center bg-gray-100 mt-8">
+      <span class>@2025 Ib Company</span>
     </footer>
 
     <!-- JavaScript -->

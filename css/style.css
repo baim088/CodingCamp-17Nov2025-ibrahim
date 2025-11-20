@@ -1,9 +1,10 @@
 .logo-icon {
   width: 75px;
   height: 75px;
-  background-image: url("../images/logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: gray;
+  background-image: url("https://picsum.photos/200/300");
+  background-size: cover;
 }
 
 .main-header {
