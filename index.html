@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,28 +45,63 @@
     <!-- Main Content -->
     <main>
       <!-- Home Page -->
-      <section id="home-page" class="min-h-[100vh] text-center content-center">
-        <h1 class="text-xl font-bold text-center" id="welcome-speech">
-          Welcome to Our Website
+      <section
+        id="home-page"
+        class="min-h-screen flex flex-col justify-center items-center text-center bg-slate-900 text-white px-4"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" id="welcome-speech">
+          Welcome to Ibrahim Company
         </h1>
-        <p class="text-center mt-2">
-          Your trusted partner in business solutions.
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
+          Solusi digital terdepan untuk kebutuhan Web Development, Data Science,
+          dan Analisis Sistem Cerdas. Kami mengubah data menjadi strategi.
         </p>
+        <a
+          href="#message-us-page"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+        >
+          Hubungi Kami
+        </a>
       </section>
     </main>
 
     <hr />
 
     <!-- Our Profile Page -->
-    <section
-      id="our-profile-page"
-      class="min-h-[100vh] text-center content-center bg-gray-50"
-    >
-      <h1 class="text-xl font-bold text-center">Our Profile</h1>
-      <p class="text-center mt-2">
-        Ibrahim Company is dedicated to providing top-notch services to our
-        clients.
-      </p>
+    <section id="our-profile-page" class="min-h-screen py-16 px-8 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1
+          class="text-3xl font-bold mb-6 border-b-4 border-blue-500 inline-block pb-2"
+        >
+          Our Profile
+        </h1>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <strong>Ibrahim Company</strong> adalah inisiatif teknologi yang
+          bergerak di bidang pengembangan perangkat lunak dan kecerdasan buatan.
+          Didirikan oleh mahasiswa Teknik Informatika yang berdedikasi tinggi
+          terhadap inovasi.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 text-left">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-2 text-blue-600">Visi Kami</h3>
+            <p class="text-black-600">
+              Menjadi mitra strategis dalam digitalisasi sistem pendidikan dan
+              bisnis UMKM melalui teknologi tepat guna.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-2 text-blue-600">Keahlian Utama</h3>
+            <ul class="list-disc list-inside text-black-600 space-y-1">
+              <li>Web Development (HTML, CSS, JS)</li>
+              <li>Data Analysis & Preprocessing (Python)</li>
+              <li>Machine Learning & Image Processing</li>
+              <li>Sistem Informasi Manajemen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <hr />
@@ -74,12 +109,75 @@
     <!-- Portofolio Page -->
     <section
       id="our-portofolio-page"
-      class="min-h-[100vh] text-center content-center bg-gray-50"
+      class="min-h-screen py-16 px-8 bg-gray-100"
     >
-      <h1 class="text-xl font-bold text-center">Portofolio</h1>
-      <p class="text-center mt-2">
-        Explore our diverse range of successful projects and satisfied clients.
-      </p>
+      <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-12">Portofolio</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-48 bg-blue-500 flex items-center justify-center">
+              <span class="text-white text-4xl font-bold">Web App</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                Sistem Informasi Ekstrakurikuler
+              </h3>
+              <p class="text-gray-600 text-sm mb-4 text-justify">
+                Platform digital terpusat untuk manajemen kegiatan siswa. Fitur
+                mencakup pendaftaran anggota baru, penjadwalan latihan, dan
+                pelaporan proker organisasi secara <em>real-time</em>.
+              </p>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                >Web Dev</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-48 bg-green-500 flex items-center justify-center">
+              <span class="text-white text-4xl font-bold">AI / ML</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Fruit Feature Extraction</h3>
+              <p class="text-gray-600 text-sm mb-4 text-justify">
+                Penelitian ekstraksi ciri citra digital pada dataset Kurma dan
+                Lemon menggunakan algoritma pengolahan citra untuk klasifikasi
+                kualitas buah.
+              </p>
+              <span
+                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                >Python</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-48 bg-purple-500 flex items-center justify-center">
+              <span class="text-white text-4xl font-bold">Data</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Data Preprocessing Tool</h3>
+              <p class="text-gray-600 text-sm mb-4 text-justify">
+                Otomatisasi pembersihan data (Cleaning) dan normalisasi
+                menggunakan Pandas dan Scikit-Learn untuk mempersiapkan dataset
+                Machine Learning.
+              </p>
+              <span
+                class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                >Data Science</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <hr />
@@ -124,10 +222,12 @@
             />
           </div>
 
-          <div class="flex items-start md:items-center">
-            <label class="w-32 font-semibold">Jenis Kelamin :</label>
+          <div class="flex items-start items-center">
+            <label class="w-32 font-semibold whitespace-nowrap px-2"
+              >Jenis Kelamin :</label
+            >
             <div class="flex gap-4 w-full">
-              <label class="flex items-center gap-1 cursor-pointer">
+              <label class="flex items-center gap-2 cursor-pointer">
                 <input
                   type="radio"
                   name="gender"
@@ -137,7 +237,7 @@
                 />
                 Laki-Laki
               </label>
-              <label class="flex items-center gap-1 cursor-pointer">
+              <label class="flex items-center gap-2 cursor-pointer">
                 <input
                   type="radio"
                   name="gender"
@@ -197,7 +297,7 @@
 
     <!-- Footer Content -->
     <footer class="p-4 text-center bg-gray-100 mt-8">
-      <span class>@2025 Ib Company</span>
+      <span class>&copy; 2025 Ib Company. All rights reserved</span>
     </footer>
 
     <!-- JavaScript -->
