@@ -3,7 +3,7 @@
   height: 75px;
   border-radius: 50%;
   background-color: gray;
-  background-image: url("https://picsum.photos/200/300");
+  background-image: url("img\logo.png");
   background-size: cover;
 }
 
